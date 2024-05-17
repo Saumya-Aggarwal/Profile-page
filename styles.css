@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aliceblue;
+}
+
+.container{
+    background-color: aliceblue;
+     border: 2px solid rgb(149, 154, 158);  /* temporary border */
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr auto;
+    gap: 2rem;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    grid-row: span 5;
+    position: sticky;
+    align-items: center;
+}
+.name-info{
+    grid-column: span 2;
+
+}
+.hobbies{
+    grid-column: span 2;
+}
+.footer{
+    grid-column: span 2;
+}
