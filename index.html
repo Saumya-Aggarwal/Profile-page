@@ -1,88 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="profile item">
-            <img src="profile.png" alt="Profile Picture">
-            <div class="link-container">
-                <h2>Socials</h2>
-                <hr class="socials">
-                <button><a href="#">Instagram</a></button>
-                <button><a href="#">LinkedIn</a></button>
-                <button><a href="#">GitHub</a></button>
-                <button><a href="#">Email</a></button>
+      <div class="profile item">
+        <img src="profile.png" alt="Profile Picture" />
+        <div class="link-container">
+          <h2>Socials</h2>
+          <hr class="socials" />
+          <a href="https://www.instagram.com/saumya_sm04/" target="_blank"><button>Instagram</button></a>
+          <a href="https://www.linkedin.com/in/saumya-aggarwal-0a009a28b/" target="_blank"><button>LinkedIn</button></a>
+          <a href="https://github.com/Saumya-Aggarwal" target="_blank"><button>GitHub</button></a>
+          <a href="mailto:ssaumya2004@gmail.com?subject=Inquiry&body=Hello,%20I%20would%20like%20to%20know%20more%20about..." target="_blank"><button>Email</button></a>
+        </div>
+      </div>
+      <div class="name-info item">
+        <h1>I am Saumya Aggarwal</h1>
+        <h3>Innovative Web Developer | Tech Enthusiast | Hackathon Achiever</h3>
+        <hr class="heading" />
+      </div>
+      <div class="experience item">
+        <h2>Experience</h2>
+        <hr class="alternate-heading" />
+        <div class="content">
+          <ul>
+            <li>
+              <strong>Dynamic Web Projects</strong><br />Crafted multiple
+              dynamic web projects using HTML, CSS, and JavaScript.
+            </li>
+            <li>
+              <strong>Python Automation</strong><br />Developed a Python project
+              that stores records of employees in a company and performs certain
+              tasks on it.
+            </li>
+            <li>
+              <strong>Team Collaboration</strong><br />Collaborated with
+              cross-functional teams to deliver seamless and responsive web
+              applications.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="education item">
+        <h2>Education</h2>
+        <hr class="alternate-heading" />
+        <div class="content">
+          <ul>
+            <li>
+              <strong>B.Tech in Computer Science Engineering</strong
+              ><br />Maharaja Agrasen Institute of Technology<br />Expected
+              Graduation: 2027
+            </li>
+            <li>
+              <strong>High School Diploma</strong><br />DAV Public School,
+              Vasant Kunj
+            </li>
+            <li>
+              <strong>Web Development Bootcamp</strong><br />Udemy, Dr. Angela
+              Yu, Developer & Lead Instructor 2023-[in progress]
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="skills item">
+        <h2>Skills</h2>
+        <hr class="alternate-heading" />
+        <div class="content">
+            <ul>
+            <li class="skills-list"><strong>HTML</strong></li>
+            <div class="progress-bar">
+              <div class="progress" id="html"></div>
             </div>
-        </div>
-        <div class="name-info item">
-            <h1>I am Saumya Aggarwal</h1>
-            <h3>Innovative Web Developer | Tech Enthusiast | Hackathon Achiever</h3>
-            <hr class="heading">
-        </div>
-        <div class="experience item">
-            <h2>Experience</h2>
-            <hr class="alternate-heading">
-            <div class="content">
-                <ul>
-                    <li><strong>Dynamic Web Projects</strong><br>Crafted multiple dynamic web projects using HTML, CSS, and JavaScript.</li>
-                    <li><strong>Python Automation</strong><br>Developed a Python project that stores records of employees in a company and performs certain tasks on it.</li>
-                    <li><strong>Team Collaboration</strong><br>Collaborated with cross-functional teams to deliver seamless and responsive web applications.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="education item">
-            <h2>Education</h2>
-            <hr class="alternate-heading">
-            <div class="content">
-                <ul>
-                    <li><strong>B.Tech in Computer Science Engineering</strong><br>Maharaja Agrasen Institute of Technology<br>Expected Graduation: 2027</li>
-                    <li><strong>High School Diploma</strong><br>DAV Public School, Vasant Kunj</li>
-                </ul>
-            </div>
-        </div>
-        <div class="skills item">
-            <h2>Skills</h2>
-            <hr class="alternate-heading">
-            <div class="content"></div>
-        </div>
-        <div class="achievement item">
-            <h2>Achievement</h2>
-            <hr class="alternate-heading">
-            <div class="content">
-                <ul>
-                    <li><strong>Hackathon Success</strong><br>Competed against hundreds of teams and secured a top 10 position in a hackathon, showcasing innovative problem-solving and teamwork.</li>
-                    <li><strong>Project Portfolio</strong><br>Created and deployed several small-scale projects, each highlighting different aspects of web development, from responsive design to interactive features.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="hobbies item">
-            <h2>Hobbies</h2>
-            <hr class="alternate-heading">
-            <div class="content">
-                <ul>
-                    <li><strong>Web Development Enthusiast</strong><br>Constantly exploring new technologies and frameworks, building side projects to enhance skills and knowledge.</li>
-                    <li><strong>Music Lover</strong><br>Enjoys discovering new music and creating playlists.</li>
-                    <li><strong>Football Aficionado</strong><br>Regularly plays football, appreciating teamwork, strategy, and the physical challenge.</li>
-                    <li><strong>Video Editing</strong><br>Develops and edits video and image content.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer item">
-            <hr class="alternate-heading">
-            <footer>
-                <div class="footer-content">
-                    <p>&copy; 2024 Your Name</p>
+            <li class="skills-list"><strong>CSS</strong></li>
+            <div class="progress-bar">
+                <div class="progress" id="css"></div>
+              </div>
+            <li class="skills-list"><strong>JavaScript</strong></li>
+            <div class="progress-bar">
+                <div class="progress" id="js"></div>
+              </div>
+            <li class="skills-list"><strong>Python</strong></li>
+            <div class="progress-bar">
+                <div class="progress" id="Python"></div>
+              </div>
+              <li class="skills-list"><strong>Git</strong></li>
+              <div class="progress-bar">
+                  <div class="progress" id="git"></div>
                 </div>
-            </footer>
+                <li class="skills-list"><strong>PhotoShop</strong></li>
+                <div class="progress-bar">
+                    <div class="progress" id="ps"></div>
+                  </div>
+                  <li class="skills-list"><strong>BootStrap</strong></li>
+                  <div class="progress-bar">
+                      <div class="progress" id="bs"></div>
+                    </div>
+            </ul>
+  
         </div>
+      </div>
+      <div class="achievement item">
+        <h2>Achievement</h2>
+        <hr class="alternate-heading" />
+        <div class="content">
+          <ul>
+            <li>
+              <strong>Hackathon Success</strong><br />Competed against hundreds
+              of teams and secured a top 10 position in a hackathon, showcasing
+              innovative problem-solving and teamwork.
+            </li>
+            <li>
+              <strong>Project Portfolio</strong><br />Created and deployed
+              several small-scale projects, each highlighting different aspects
+              of web development, from responsive design to interactive
+              features.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="hobbies item">
+        <h2>Hobbies</h2>
+        <hr class="alternate-heading" />
+        <div class="content">
+          <ul>
+            <li>
+              <strong>Web Development Enthusiast</strong><br />Constantly
+              exploring new technologies and frameworks, building side projects
+              to enhance skills and knowledge.
+            </li>
+            <li>
+              <strong>Music Lover</strong><br />Enjoys discovering new music and
+              creating playlists.
+            </li>
+            <li>
+              <strong>Football Aficionado</strong><br />Regularly plays
+              football, appreciating teamwork, strategy, and the physical
+              challenge.
+            </li>
+            <li>
+              <strong>Video Editing</strong><br />Develops and edits video and
+              image content.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer item">
+        <hr class="alternate-heading" />
+        <footer>
+          <div class="footer-content">
+            <p>&copy; 2024 Saumya Aggarwal. All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
     </div>
-</body>
+  </body>
 </html>

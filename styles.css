@@ -1,116 +1,188 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color: aliceblue;
-    font-family: 'Lora', serif;
-    font-size: 1rem;
+body {
+  background-color: aliceblue;
+  font-family: "Lora", serif;
+  font-size: 1rem;
 }
-
-.container{
-    background-color: aliceblue;
-    /* border: 2px solid rgb(149, 154, 158);  temporary border */
-    width: 75%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: 1fr 2fr 2fr 1fr auto;
-    gap: 2rem;
-    padding-top: 50px;
-    padding-left: 30px;
-    padding-right: 10px;
+strong {
+  font-size: 1.08rem;
 }
-h2{
-    font-family: 'Playfair Display',serif;
-    font-size: 2rem;
-    margin: 0%;
-    padding: 0%;
+.container {
+  background-color: rgb(244, 255, 240);
+  /* border: 2px solid rgb(149, 154, 158); */
+  /* temporary border */
+  width: 75%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: 70px auto auto auto auto;
+  gap: 2rem;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 25px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;}
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin: 0%;
+  padding: 0%;
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+  color: #000000;
+  padding: 20px 0;
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.profile{
-    display: flex;
-    flex-direction: column;
-    grid-row: span 5;
-    position: sticky;
-    align-items: center;
-    top:10px;
-    padding: 20px;
+.profile {
+  display: flex;
+  flex-direction: column;
+  grid-row: span 5;
+  position: sticky;
+  align-items: center;
+  top: 10px;
+  padding: 20px;
+}
+img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 250px;
+  aspect-ratio: 1;
+  margin-bottom: 50px;
+  transition: transform 0.3s, box-shadow 0.3s;
+   /* to make the hover animation smoother */  
+  -webkit-transition: transform 0.3s, box-shadow 0.3s;
+  -moz-transition: transform 0.3s, box-shadow 0.3s;
+  -ms-transition: transform 0.3s, box-shadow 0.3s;
+  -o-transition: transform 0.3s, box-shadow 0.3s;
+}
+img:hover{
+    transform:scale(1.05);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    -webkit-transform:scale(1.05);
+    -moz-transform:scale(1.05);
+    -ms-transform:scale(1.05);
+    -o-transform:scale(1.05);
+}
+.link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.link-container a button {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.name-info {
+  grid-column: span 2;
+  h1 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+}
+.hobbies {
+  grid-column: span 2;
+}
+.footer {
+  grid-column: span 2;
+}
 
+.item {
+  height: fit-content; /* Adjust the minimum height as needed */
 }
-img{
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    width: 270px;
-    aspect-ratio: 1;
-    margin-bottom: 50px;
+button {
+  background-color: transparent;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  -webkit-transition: transform 0.2s, box-shadow 0.2s;
+  -moz-transition: transform 0.2s, box-shadow 0.2s;
+  -ms-transition: transform 0.2s, box-shadow 0.2s;
+  -o-transition: transform 0.2s, box-shadow 0.2s;
 }
-.link-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+button:hover{
+    transform: scale(1.05);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 10px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
 }
-.link-container a{
-    color: #333;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 600;
+button:active{
+    scale: 0.95;
+    background-color: #00000022;
 }
-.name-info{
-    grid-column: span 2;
-    h1{
-        font-size: 2.5rem;}
-    h3{
-        font-size: 1rem;
+hr {
+  width: 100%;
+  border-bottom: 3px solid black;
+  padding-bottom: 2px;
+  margin-top: 5px;
+}
+.content {
+  padding-top: 30px;
+  line-height: 1.3rem;
+  li {
+    list-style: none;
+    padding-bottom: 20px;
+  }
+  li.skills-list {
+    padding-bottom: 10px;
+    strong{
+        text-decoration: underline;
     }
-
+    
+  }
 }
-.hobbies{
-    grid-column: span 2;
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: transparent;
+  border: #000000 solid 1px;
+  margin-bottom: 15px;
 }
-.footer{
-    grid-column: span 2;
-}
-
-.item{
-    min-height: 200px;
-    max-height: 300px; /* Adjust the minimum height as needed */
-
-}
-button{
-    background-color: transparent;
-    text-align: center;
-    padding: 10px;
-    border: none;
-}
-
-hr{
+.progress{
     width: 100%;
-    border-bottom: 3px solid black;
-    padding-bottom: 2px;
-    margin-top: 5px;
+    height: 8px;
+    background-color: greenyellow;
 }
-.content{
-    padding-top: 30px;
-    li{
-        list-style: none;
-        padding-bottom: 20px;
-    }
+#html, #css{
+    width: 90%;
+}
+#js{
+    width: 60%;
+}
+#bs{
+    width: 70%;
+}
+#git{
+    width: 35%;
+}
+#Python{
+    width: 45%;
+}
+#ps{
+    width: 40%;
 }
