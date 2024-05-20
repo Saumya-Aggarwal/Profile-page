@@ -16,7 +16,7 @@ strong {
   background-color: rgb(244, 255, 240);
   /* border: 2px solid rgb(149, 154, 158); */
   /* temporary border */
-  width: 75%;
+  width: 73%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
