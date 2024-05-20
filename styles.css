@@ -7,6 +7,7 @@ body {
   background-color: aliceblue;
   font-family: "Lora", serif;
   font-size: 1rem;
+  color: #414141;
 }
 strong {
   font-size: 1.08rem;
@@ -21,15 +22,16 @@ strong {
   grid-template-columns: 1fr 2fr 2fr;
   grid-template-rows: 70px auto auto auto auto;
   gap: 2rem;
-  padding-top: 50px;
+  padding-top: 35px;
   padding-left: 20px;
   padding-right: 25px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;}
 h2 {
   font-family: "Playfair Display", serif;
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin: 0%;
   padding: 0%;
+  color: #000000;
 }
 
 footer {
@@ -44,7 +46,7 @@ footer {
 .profile {
   display: flex;
   flex-direction: column;
-  grid-row: span 5;
+  grid-row: span 4;
   position: sticky;
   align-items: center;
   top: 10px;
@@ -79,13 +81,16 @@ img:hover{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
 }
 .link-container a button {
-  color: #333;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 600;
+  padding: 10px 20px;
+  color: rgb(255, 112, 112);
+}
+a{
+    margin-top: 10px;
 }
 .name-info {
   grid-column: span 2;
@@ -100,12 +105,41 @@ img:hover{
   grid-column: span 2;
 }
 .footer {
-  grid-column: span 2;
+  grid-column: span 3;
+  text-align: center;
+margin-bottom: 0;
+}
+footer{
+    padding-block: 10px; /** applied to footer tag which has default padding of 20px*/
+}
+
+.experience , .education {
+    margin-top: 20px;
 }
 
 .item {
-  height: fit-content; /* Adjust the minimum height as needed */
+  height: fit-content;
+  /*Adjusttheminimumheightasneeded*/padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  
 }
+.item:not(.footer, .profile){ /* for not applying on footer and profile*/
+    transition: transform 0.3s,box-shadow 0.3s;
+    -webkit-transition: transform 0.3s,box-shadow 0.3s;
+    -moz-transition: transform 0.3s,box-shadow 0.3s;
+    -ms-transition: transform 0.3s,box-shadow 0.3s;
+    -o-transition: transform 0.3s,box-shadow 0.3s;
+    &:hover{
+        transform:scale(1.05);
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        -webkit-transform:scale(1.05);
+        -moz-transform:scale(1.05);}
+}
+
 button {
   background-color: transparent;
   text-align: center;
@@ -135,7 +169,7 @@ button:active{
     scale: 0.95;
     background-color: #00000022;
 }
-hr {
+hr:not(.footer){
   width: 100%;
   border-bottom: 3px solid black;
   padding-bottom: 2px;
@@ -186,3 +220,8 @@ hr {
 #ps{
     width: 40%;
 }
+h1{
+    color: #000000  ;
+}
+/* ! MAKING the website responsive */
+@media
