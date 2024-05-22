@@ -6,26 +6,36 @@
 body {
   background-color: aliceblue;
   font-family: "Lora", serif;
-  font-size: 1rem;
+  /* font-size: 1rem    ; */
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
   color: #414141;
 }
 strong {
-  font-size: 1.08rem;
+  /* font-size: 1.08rem; */
+  font-size: clamp(1.08rem, calc(1.08rem + 0.125vw), 1.2rem);
 }
 .container {
   background-color: rgb(244, 255, 240);
-  /* border: 2px solid rgb(149, 154, 158); */
-  /* temporary border */
-  width: 75%;
+  border: 1.5px solid rgb(149, 154, 158);
+  width: 73%;
+  min-width: 1201.58px;
+  max-width: 1491.39px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
   grid-template-rows: 70px auto auto auto auto;
   gap: 2rem;
-  padding-top: 35px;
+  border-radius: 15px;
+  margin-block: 10px;
+  padding-top: 45px;
   padding-left: 20px;
   padding-right: 25px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;}
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
 h2 {
   font-family: "Playfair Display", serif;
   font-size: 1.7rem;
@@ -62,19 +72,20 @@ img {
   aspect-ratio: 1;
   margin-bottom: 50px;
   transition: transform 0.3s, box-shadow 0.3s;
-   /* to make the hover animation smoother */  
+  /* to make the hover animation smoother */
   -webkit-transition: transform 0.3s, box-shadow 0.3s;
   -moz-transition: transform 0.3s, box-shadow 0.3s;
   -ms-transition: transform 0.3s, box-shadow 0.3s;
   -o-transition: transform 0.3s, box-shadow 0.3s;
 }
-img:hover{
-    transform:scale(1.05);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    -webkit-transform:scale(1.05);
-    -moz-transform:scale(1.05);
-    -ms-transform:scale(1.05);
-    -o-transform:scale(1.05);
+img:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
 }
 .link-container {
   display: flex;
@@ -89,8 +100,8 @@ img:hover{
   padding: 10px 20px;
   color: rgb(255, 112, 112);
 }
-a{
-    margin-top: 10px;
+a {
+  margin-top: 10px;
 }
 .name-info {
   grid-column: span 2;
@@ -107,37 +118,43 @@ a{
 .footer {
   grid-column: span 3;
   text-align: center;
-margin-bottom: 0;
+  margin-bottom: 0;
 }
-footer{
-    padding-block: 10px; /** applied to footer tag which has default padding of 20px*/
+footer {
+  padding-block: 10px; /** applied to footer tag which has default padding of 20px*/
 }
 
-.experience , .education {
-    margin-top: 20px;
+.experience,
+.education {
+  margin-top: 20px;
 }
 
 .item {
   height: fit-content;
-  /*Adjusttheminimumheightasneeded*/padding: 10px;
+  /*Adjust the minimum height as needed*/
+  padding: 10px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  
+
 }
-.item:not(.footer, .profile){ /* for not applying on footer and profile*/
-    transition: transform 0.3s,box-shadow 0.3s;
-    -webkit-transition: transform 0.3s,box-shadow 0.3s;
-    -moz-transition: transform 0.3s,box-shadow 0.3s;
-    -ms-transition: transform 0.3s,box-shadow 0.3s;
-    -o-transition: transform 0.3s,box-shadow 0.3s;
-    &:hover{
-        transform:scale(1.05);
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        -webkit-transform:scale(1.05);
-        -moz-transform:scale(1.05);}
+.item:not(.footer, .profile) {
+  /* for not applying on footer and profile*/
+  transition: transform 0.3s, box-shadow 0.3s;
+  -webkit-transition: transform 0.3s, box-shadow 0.3s;
+  -moz-transition: transform 0.3s, box-shadow 0.3s;
+  -ms-transition: transform 0.3s, box-shadow 0.3s;
+  -o-transition: transform 0.3s, box-shadow 0.3s;
+  /* *adding transition  */
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+  }
 }
 
 button {
@@ -152,24 +169,25 @@ button {
   -ms-transition: transform 0.2s, box-shadow 0.2s;
   -o-transition: transform 0.2s, box-shadow 0.2s;
 }
-button:hover{
-    transform: scale(1.05);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    border-radius: 10px;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
+button:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
 }
-button:active{
-    scale: 0.95;
-    background-color: #00000022;
+button:active {
+  scale: 0.95;
+  background-color: #00000022;
 }
-hr:not(.footer){
+hr:not(.footer) {
   width: 100%;
   border-bottom: 3px solid black;
   padding-bottom: 2px;
@@ -184,10 +202,9 @@ hr:not(.footer){
   }
   li.skills-list {
     padding-bottom: 10px;
-    strong{
-        text-decoration: underline;
+    strong {
+      text-decoration: underline;
     }
-    
   }
 }
 .progress-bar {
@@ -197,31 +214,102 @@ hr:not(.footer){
   border: #000000 solid 1px;
   margin-bottom: 15px;
 }
-.progress{
-    width: 100%;
-    height: 8px;
-    background-color: greenyellow;
+.progress {
+  width: 100%;
+  height: 8px;
+  background-color: greenyellow;
 }
-#html, #css{
-    width: 90%;
+/* loading bar */
+#html,
+#css {
+  width: 90%;
 }
-#js{
-    width: 60%;
+#js {
+  width: 60%;
 }
-#bs{
-    width: 70%;
+#bs {
+  width: 70%;
 }
-#git{
-    width: 35%;
+#git {
+  width: 35%;
 }
-#Python{
-    width: 45%;
+#Python {
+  width: 45%;
 }
-#ps{
-    width: 40%;
+#ps {
+  width: 40%;
 }
-h1{
-    color: #000000  ;
+h1 {
+  color: #000000;
+  font-size: clamp(2rem, 3vw, 2.2rem);
+}
+h3 {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+h2 {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
 }
 /* ! MAKING the website responsive */
-@media
+@media (max-width: 1253px) {
+  .container {
+    min-width: unset; /* Remove the minimum width to allow full responsiveness */
+    width: 90%;
+    padding-right: 30px;
+  }
+  .experience {
+    grid-column: span 2;
+  }
+  .education {
+    grid-column: span 2;
+  }
+  .skills {
+    grid-column: span 2;
+  }
+  .achievement {
+    grid-column: span 2;
+  }
+  .profile {
+    grid-row: span 6;
+  }
+}
+@media (max-width: 1015px) {
+  .container {
+    grid-template-columns: auto;
+    grid-column-gap: 0px;
+    padding-top: 20px;
+    padding-inline: 30px;
+    min-width: 750px;
+  }
+
+  .profile {
+    flex-direction: row;
+    grid-row: span 2;
+    grid-column: span 2;
+    align-items: center;
+    position: relative;
+  }
+  img {
+    width: 200px;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .link-container {
+    flex-direction: row;
+    h2 {
+      display: none;
+    }
+    hr {
+      display: none;
+    }
+  }
+  h2 {
+    font-size: clamp(1.3rem, 1.5vw, 1.6rem);
+  }
+}
+@media (max-width: 795px) {
+
+  
+  
+  
+}
